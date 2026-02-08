@@ -1,6 +1,7 @@
-package com.amm.kotlinplayground
+﻿package com.amm.kotlinplayground
 
 
+import java.io.PrintStream
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -32,10 +33,15 @@ fun variables(){
     var name="Kotlin" //mutable
     val myName="Miguel" //inmutable
     //Error       myName="Pepe"
+    System.setOut(PrintStream(System.out, true, "UTF-8"))
     println(name)
     println("Hello $name")
     println("Cambiame de línea $name")
+    println("á é í ó ú ñ Ñ ü")
+    println("file.encoding=" + System.getProperty("file.encoding"))
     print("Hello \"$myName\"\n")
+
+    return
 
     //    Initializing variables
     //    ---------------------------------------------------
@@ -2119,6 +2125,8 @@ object Repository{
             Result.LOADING -> {
                 dataFetched = null
             }
+
+            else -> {}
         }
     }
     //Una funcion para pretuntar el estado actual.
@@ -2413,6 +2421,8 @@ object Repository5{
             is Loading5 -> {
                 dataFetched = null
             }
+
+            else -> {}
         }
     }
     //Una funcion para pretuntar el estado actual.
