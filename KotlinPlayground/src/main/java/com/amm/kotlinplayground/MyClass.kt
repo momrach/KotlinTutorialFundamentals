@@ -7,6 +7,7 @@ import kotlin.collections.HashMap
 
 
 fun main(){
+    System.setOut(PrintStream(System.out, true, "UTF-8"))
     variables()
     //operators()
     //ifAndWhen()
@@ -33,7 +34,6 @@ fun variables(){
     var name="Kotlin" //mutable
     val myName="Miguel" //inmutable
     //Error       myName="Pepe"
-    System.setOut(PrintStream(System.out, true, "UTF-8"))
     println(name)
     println("Hello $name")
     println("Cambiame de línea $name")
