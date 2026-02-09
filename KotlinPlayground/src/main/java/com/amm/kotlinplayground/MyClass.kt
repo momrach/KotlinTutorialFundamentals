@@ -6,8 +6,14 @@ import java.util.*
 import kotlin.collections.HashMap
 
 
+fun ClearConsole(){
+    print("\u001b[H\u001b[2J")
+    System.out.flush()
+}
+
 fun main(){
     System.setOut(PrintStream(System.out, true, "UTF-8"))
+    ClearConsole()
     variables()
     //operators()
     //ifAndWhen()
@@ -41,7 +47,7 @@ fun variables(){
     println("file.encoding=" + System.getProperty("file.encoding"))
     print("Hello \"$myName\"\n")
 
-    return
+
 
     //    Initializing variables
     //    ---------------------------------------------------
